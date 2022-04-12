@@ -1,0 +1,25 @@
+{
+  "name": "vite-pug-template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "glob": "^8.0.1",
+    "vite": "^2.9.0",
+    "vite-plugin-pug": "^0.3.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "jquery": "^3.6.0",
+    "picocolors": "~1",
+    "postcss": "^8.4.12",
+    "postcss-import": "^14.1.0",
+    "pug": "^3.0.2",
+    "tailwindcss": "^3.0.23",
+    "vue": "^3.2.31"
+  }
+}
