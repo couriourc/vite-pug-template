@@ -1,0 +1,18 @@
+name: eslint
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Packages
+      run: |
+        npm install
+    - name: Run ESLint
+      run: |
+        npx eslint --ext .ts,.js src

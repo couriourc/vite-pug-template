@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "amandeepmittal.pug",
+    "mrmlnc.vscode-pugbeautify",
+    "mrmlnc.vscode-puglint",
+    "PKief.material-icon-theme",
+    "ducfilan.pug-formatter",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "jgclark.vscode-todo-highlight",
+    "streetsidesoftware.code-spell-checker",
+    "wix.vscode-import-cost"
+  ]
+}

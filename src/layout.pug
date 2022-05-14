@@ -3,13 +3,13 @@ doctype html
 //- layout.pug
 html(lang="zh_CN")
     head
-        meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1")
+        include ./pug/meta.pug
         block styles
             link(rel="stylesheet", href="/css/weily-ui.css")
             link(rel="stylesheet", href="/css/animation.css")
             link(rel="stylesheet", href="/css/normalize.css")
         block title
+        
     body
         block content
         block footer
