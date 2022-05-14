@@ -1,8 +1,6 @@
 {
   "files.autoSave": "onWindowChange",
   "files.autoSaveDelay": 2000,
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "workbench.iconTheme": "material-icon-theme",
   "editor.defaultFormatter": "ducfilan.pug-formatter",
@@ -17,14 +15,7 @@
   "[pug]": {
     "editor.defaultFormatter": "ducfilan.pug-formatter"
   },
-  "cSpell.words": [
-    "picocolors",
-    "preinstall",
-    "puglint",
-    "tailwindcss",
-    "vite",
-    "vitejs"
-  ],
+  "cSpell.words": ["picocolors", "preinstall", "puglint", "tailwindcss", "vite", "vitejs"],
 
   // vscode默认启用了根据文件类型自动设置tabsize的选项
   "editor.detectIndentation": false,
@@ -32,8 +23,6 @@
   "editor.tabSize": 2,
   // #每次保存的时候自动格式化
   "editor.formatOnSave": true,
-  // #每次保存的时候将代码按eslint格式进行修复
-  "eslint.autoFixOnSave": true,
   // 添加 vue 支持
   "eslint.validate": ["javascript", "typescript"],
   //  #让prettier使用eslint的代码格式进行校验

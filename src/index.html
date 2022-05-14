@@ -3,7 +3,8 @@ extends layout.pug
 block content
     - var buttonClz = ['text-white', 'bg-indigo-500', 'font-bold', 'border-solid','border-2','border-indigo-600','hover:bg-sky-700','bg-green-500']
     button(class=buttonClz) Hello World
-    button(class=buttonClz).mr10.animation-shake 采用了 pug tailwindcss 这些库
+    button(class=buttonClz).ml-10.animation-shake 采用了 pug tailwindcss 这些库
     code
         pre 测试
+    a(href="./frontend/index.html" style="text-decoration:none;font-size:30px;") 页面跳转
     script(type='module', src='./index.js')

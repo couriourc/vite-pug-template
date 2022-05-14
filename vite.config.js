@@ -6,21 +6,25 @@ import legacy from '@vitejs/plugin-legacy'
 const options = { pretty: true, localImports: true } // FIXME: pug pretty is deprecated!
 const locals = {}
 
-export function excludePrivate (item) {
+export function excludePrivate(item) {
   return !path.basename(item).startsWith('_')
 }
 
-export function getRootDir (excludeFn = () => true) {
-  return glob.sync('src/**/*.html').filter(excludeFn).map((item, index) => {
-    return {
-      [index]: item
-    }
-  }).reduce((memo, cur) => {
-    return {
-      ...memo,
-      ...cur
-    }
-  }, {})
+export function getRootDir(excludeFn = () => true) {
+  return glob
+    .sync('src/**/*.html')
+    .filter(excludeFn)
+    .map((item, index) => {
+      return {
+        [index]: item
+      }
+    })
+    .reduce((memo, cur) => {
+      return {
+        ...memo,
+        ...cur
+      }
+    }, {})
 }
 
 export default defineConfig({
@@ -37,6 +41,9 @@ export default defineConfig({
     alias: {
       '@': path.join(__dirname, 'src')
     }
+  },
+  server: {
+    host: true
   },
   build: {
     target: 'es2015',
