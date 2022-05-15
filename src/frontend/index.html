@@ -1,6 +1,11 @@
 extends ../layout.pug
 
 block content
-    div.flex.border.border-gray-300.rounded.p-4.mb-4
-        div.border 前端
+    div: .flex.border.border-gray-300.rounded.p-4.mb-4(
+        class="hover:border-red-300"
+    )
+        div.tt.border(
+            border="49px"
+        ) 前端
     script(type='module', src='./index.js')
+
