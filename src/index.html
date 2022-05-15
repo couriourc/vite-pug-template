@@ -1,7 +1,13 @@
 extends layout.pug
+include ./pug/iconify
+include ./pug/loader/loader
 
 block content
-    div.logo-bar
+    div.logo-bar(
+        class="flex-row " +
+        "justify-center " +
+        "flex"
+    )
         img(src="https://cn.vitejs.dev/logo.svg"
             alt="vite-logo"
             width="200px"
@@ -9,7 +15,28 @@ block content
         img(src="https://www.pugjs.cn/images/pugjs.png"
             alt="pug-logo"
         ).logo
-    button(id="button").p-1.btn-red.center.text-white.bg-green-500 其他页面
+
+    div(
+        class="flex flex-row justify-center"
+    )
+        button(id="button"
+            class="btn bg-green-500 " +
+            "p-1 " +
+            "rounded-lg " +
+            "shadow-sm " +
+            "text-gray-500 " +
+            "font-light " +
+            "text-center " +
+            "duration-500 " +
+            "ease-in-out " +
+            "hover:text-white " +
+            "hover:shadow-lg " +
+            "text-center " +
+            "go-button "
+        )
+            | Go
+            +iconify("akar-icons:light-bulb","24px","24px")
+    +loading()
     script(type="module" src="./index.js")
 
 

@@ -1,0 +1,48 @@
+.loading {
+    z-index: 1000;
+}
+
+.loader {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    background-color: $main;
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    animation: mainAnimation 2.6s ease 0s infinite forwards;
+    z-index: 2;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: -50px;
+        background-color: $main;
+        transform-origin: top right;
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+        animation: secundaryAnimation 2.6s ease 0s infinite forwards;
+    }
+}
+
+.shadow {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -75px;
+    border-radius: 50%;
+    background-color: #95a5a6;
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    animation: shadowAnimation 2.6s ease 0s infinite forwards,
+    float 5s ease-in-out 0s infinite forwards;
+    filter: blur(5px);
+    z-index: 1;
+}

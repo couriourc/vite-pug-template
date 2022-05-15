@@ -4,6 +4,7 @@ import path from 'path'
 import glob from 'glob'
 import legacy from '@vitejs/plugin-legacy'
 import WindiCSS from 'vite-plugin-windicss'
+import PurgeIcons from 'vite-plugin-purge-icons'
 
 const options = { pretty: true, localImports: true } // FIXME: pug pretty is deprecated!
 const locals = {}
@@ -33,8 +34,9 @@ export default defineConfig({
   root: path.join(__dirname, 'src'),
   publicPath: path.join(__dirname, 'public'),
   plugins: [
-    pugPluginTest(options, locals),
+    PurgeIcons({}),
     WindiCSS(),
+    pugPluginTest(options, locals),
     legacy({
       targets: ['ie >= 11'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime']

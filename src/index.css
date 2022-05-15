@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Biko;
+    src: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff);
+}
+
+.logo {
+    font-size: 20vw;
+    font-family: Biko, sans-serif;
+    text-align: center;
+    background: transparent;
+}
+
+.go-button {
+    display: flex;
+}
+
+$main : #FFF5A5;
+$secundary : #FFD4DA;
+$terchiary : #99D2E4;
+
+@keyframes mainAnimation {
+    0% {
+        width: 50px;
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    20% {
+        width: 50px;
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    40% {
+        width: 150px;
+        transform: translateX(-50px) translateY(0px) rotate(0deg);
+    }
+    60% {
+        width: 150px;
+        transform-origin: bottom right;
+        transform: translateX(-150px) translateY(0px) rotate(90deg);
+    }
+    80% {
+        width: 50px;
+        transform: translateX(-25px) translateY(0px) rotate(90deg);
+    }
+    100% {
+        width: 50px;
+        transform: translateX(-50px) translateY(0px) rotate(90deg);
+    }
+}
+
+@keyframes secundaryAnimation {
+    0% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    20% {
+        transform: translateX(0px) translateY(0px) rotate(180deg);
+    }
+    40% {
+        transform: translateX(0px) translateY(0px) rotate(180deg);
+    }
+    60% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    80% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) rotate(180deg);
+    }
+}
+
+@keyframes shadowAnimation {
+    0% {
+        width: 150px;
+        transform: translateX(-25px) translateY(0px) rotate(0deg);
+    }
+    20% {
+        width: 75px;
+        transform: translateX(37.5px) translateY(0px) rotate(0deg);
+    }
+    40% {
+        width: 200px;
+        transform: translateX(-25px) translateY(0px) rotate(0deg);
+    }
+    60% {
+        width: 75px;
+        transform: translateX(37.5px) translateY(0px) rotate(0deg);
+    }
+    80% {
+        width: 75px;
+        transform: translateX(37.5px) translateY(0px) rotate(0deg);
+    }
+    100% {
+        width: 150px;
+        transform: translateX(-25px) translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        top: 50%;
+    }
+    50% {
+        top: 51%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+// Styling
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background: rgb(153, 210, 228);
+    background: linear-gradient(135deg, rgb(153, 210, 228) 0%, rgb(255, 212, 218) 100%);
+}

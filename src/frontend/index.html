@@ -1,11 +1,28 @@
 extends ../layout.pug
 
 block content
-    div: .flex.border.border-gray-300.rounded.p-4.mb-4(
-        class="hover:border-red-300"
+    div.p-4.mb-4(
+        class="h-100" +
+        "border-gray-300 " +
+        "hover:border-red-300 " +
+        "border " +
+        "rounded "
     )
-        div.tt.border(
-            border="49px"
-        ) 前端
-    script(type='module', src='./index.js')
+        div.tt
+            | 前端
+    video(
+        autoplay muted
+        loop preload
+        poster="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg"
+    )
+        source(
+            src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ocean-small.webm"
+        )
+        source(
+            src="//thenewcode.com/assets/videos/ocean-small.mp4"
+        )
+    h1
+        | WeiLy
+
+    script(type='module' src='./index.js')
 
