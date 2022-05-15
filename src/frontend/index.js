@@ -1,4 +1,4 @@
-import '../public/css/tailwind.css'
+import 'virtual:windi.css'
 import './index.css'
 import $ from 'jquery'
 

@@ -3,6 +3,8 @@ import pugPluginTest from './vite-plugin/pug'
 import path from 'path'
 import glob from 'glob'
 import legacy from '@vitejs/plugin-legacy'
+import WindiCSS from 'vite-plugin-windicss'
+
 const options = { pretty: true, localImports: true } // FIXME: pug pretty is deprecated!
 const locals = {}
 
@@ -32,6 +34,7 @@ export default defineConfig({
   publicPath: path.join(__dirname, 'public'),
   plugins: [
     pugPluginTest(options, locals),
+    WindiCSS(),
     legacy({
       targets: ['ie >= 11'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime']

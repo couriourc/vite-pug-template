@@ -1,5 +1,8 @@
+import 'virtual:windi.css'
 import $ from 'jquery'
 
 $(document).ready(function () {
-  console.log('Hello World!')
+  $('#button').click(() => {
+    window.location.href = '/frontend/index.html'
+  })
 })
